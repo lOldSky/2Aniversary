@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card-container">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'Inicio')">❤️ Inicio</button>
+        <button class="tab-btn" onclick="openTab(event, 'Albumes')">📸 Nuestros Recuerdos</button>
+        <button class="tab-btn" onclick="openTab(event, 'Carta')">💌 Carta</button>
+    </div>
+
+    <div id="Inicio" class="content active">
+        <h1>❤️Feliz segundo Aniversario❤️</h1>
+        <p>A la camaroncita de mi vida</p>
+        <p>He creado este mini espacio digital para recopilar una pequeña parte de nuestra relación ❤️</p>
+        <p>Con las pestañas de arriba vas navegando mi muñeca</p>
+    </div>
+
+    <div id="Albumes" class="content">
+        <h2>Ve uno a uno preciosa</h2>
+        <div class="grid-menu">
+            <a href="viaje1.html" class="nav-card">
+                <img src="img/portada_v1.jpeg" alt="Viaje 1">
+                <h3>Nuestro viajecito a Cuenca</h3>
+            </a>
+            <a href="viaje2.html" class="nav-card">
+                <img src="img/portada_v2.jpeg" alt="Viaje 2">
+                <h3>Nuestro viajecito a Quito</h3>
+            </a>
+            <a href="juegos.html" class="nav-card">
+                <img src="img/portada_juegos.jpeg" alt="Juegos">
+                <h3>Noviecitos Wherever</h3>
+            </a>
+            <a href="dia_a_dia.html" class="nav-card">
+                <img src="img/portada_dia.jpeg" alt="Día a Día">
+                <h3>Día a Día</h3>
+            </a>
+        </div>
+    </div>
+
+    <div id="Carta" class="content">
+        <h2>Para ti, mi Cami</h2>
+        <p>No hay palabras casi que no se hayan dicho antes, y aunque se repitan no pierden valor, en cambio se multiplica con cada día que pasa. 
+            Y es que me Cami. realmente te admiro y, a través de conocerte, he aprendido cosas de como afrontar la vida. 
+            Empezaste siendo una chica timida que apenas y quería mostrarse en videollamada a una chica que hasta se depila frente a mi, y amor, amo mucho que tengas esa confianza
+        </p>
+        <p>Una chica fuerte que aunque el mundo sea injusto y por ratos siente que se le venga encima, sigue sonriendo y plantando cara a las situaciones
+            Admiro su empatía y que con su sola presencia haga al mundo sentirse más bonito en los días pesados, y sobretodo, admiro mucho el esfuerzo
+            y pasión entregada a las cosas con las que está, que por ejemplo aunque no esté trabajando aún ya que no está bajo su control, siga perseverando en entregar su CV con
+            al menos una pizca de esperanza. Que sepas que el como eres me motiva e impulsa a seguir esforzandome tambien hacia un futuro donde estemos juntos porfin, 
+            eres mi faro en una tormenta ❤️
+        </p>
+        <p>Lo que más le agradezco es todo el tiempo que me comparte, incluso los que no hacemos nada y solo estamos en silencio. Gracias por escucharme
+            y hacer el esfuerzo por entenderme, espero que yo le haga sentir de la misma manera cada día. Gracias por su paciencia y entrega, sus palabras y sonrisas, y cuando me haces algún 
+            detallito que amo con toda mi vida. Gracias por estos dos años juntos que han parecido dos días, ME ENCANTAS HASTA LO MÁS PROFUNDO DE MI SER
+        </p>
+        <p>
+            Que recuerde que te elijo cada día incluyendo aquellos que sted siente que no es facil de querer, que este nuevo añito juntos nos traigan conversaciones que nos ayuden a seguir creciendo 
+            y entendiendo al otro de tal manera que los pilares de nuestra vida juntos que deseamos se hagan más fuertes. Se dice que el enamoramiento es pasajero pero para mi, incluso en los momentos 
+            que más cabello de leon y natural está, me alborotatodo dentro de mi, me generas muchas ganas de besarte y no paro de recordarle que la amo y la deseo de todas las maneras.
+            La emoción de hacer planes, vernos, y cumplir nuestras metas se ha hecho más fuerte con cada dia, y espero lo siga haciendo aún despues de cumplir el vivir juntos 
+        </p>
+        <p>Gracias otra vez por estos dos años juntos mi Cami, eres mi compañera y el amor de mi vida</p>
+        <p>TE AMO CON TODA MI ALMA ❤️</p>
+    </div>
+</div>
+
+<script>
+    // Lógica de cambio de pestañas
+    function openTab(evt, tabName) {
+        var i, content, tabbtns;
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+            content[i].classList.remove("active");
+        }
+        tabbtns = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tabbtns.length; i++) {
+            tabbtns[i].className = tabbtns[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>

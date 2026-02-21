@@ -1,0 +1,95 @@
+/* style.css */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal de pestañas */
+.card-container { 
+    background: white; 
+    width: 100%; 
+    max-width: 800px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+}
+
+/* Pestañas */
+.tabs { display: flex; background: #333; }
+.tab-btn { 
+    flex: 1; padding: 15px; border: none; background: none; 
+    color: white; cursor: pointer; font-size: 16px; transition: 0.3s; 
+}
+.tab-btn:hover { background: #555; }
+.tab-btn.active { background: #ff4757; font-weight: bold; }
+
+/* Contenido de las pestañas */
+.content { display: none; padding: 30px; text-align: center; animation: fadeEffect 0.5s; }
+.content.active { display: block; }
+@keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+
+/* Tipografía */
+h1, h2 { color: #333; }
+p { color: #666; line-height: 1.6; }
+
+/* --- SECCIÓN: Cuadrícula de Tarjetas (Pestaña 2) --- */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.nav-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.nav-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.nav-card h3 { margin: 15px 0; font-size: 1.2rem; }
+
+/* --- SECCIÓN: Subpáginas (Viajes, Juegos, etc.) --- */
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+.btn-volver:hover { background-color: #ff6b81; }
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+}
+.galeria img { width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
